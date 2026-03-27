@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brewflock-orange: #ea580c;
+  --color-brewflock-navy: #0f172a;
+  --color-brewflock-steel: #64748b;
+}
+
+/* Fallback base styles using standard CSS instead of @apply */
+body {
+  background-color: #f8fafc; /* slate-50 */
+  color: #0f172a; /* slate-900 */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Keep complex components simple */
+@layer components {
+  .btn-primary {
+    background-color: var(--color-brewflock-orange);
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover {
+    background-color: #c2410c; /* orange-700 */
+  }
+}
